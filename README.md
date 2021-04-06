@@ -1,6 +1,6 @@
 # todo_app
 
-A new Flutter project.
+A new Flutter project created for Flutter Engage Extended, Ghana.
 
 ## Getting Started
 
