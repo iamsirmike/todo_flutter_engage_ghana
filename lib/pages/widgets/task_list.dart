@@ -31,9 +31,7 @@ class TaskList extends StatelessWidget {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
-                        color: taskVm.tasksList[index].isDone
-                            ? Colors.green
-                            : Color(0xffCBD5E0),
+                        color: taskVm.tasksList[index].isDone ? Colors.green : Color(0xffCBD5E0),
                       ),
                     ),
                     child: taskVm.tasksList[index].isDone
@@ -48,12 +46,11 @@ class TaskList extends StatelessWidget {
                 SizedBox(
                   width: 15,
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      width: 300,
-                      child: Text(
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
                         taskVm.tasksList[index].taskname,
                         overflow: TextOverflow.clip,
                         style: TextStyle(
@@ -64,15 +61,15 @@ class TaskList extends StatelessWidget {
                                 ? TextDecoration.lineThrough
                                 : TextDecoration.none),
                       ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      taskVm.tasksList[index].duration ?? "",
-                      style: TextStyle(fontSize: 12, color: Color(0xff3A3A3A)),
-                    ),
-                  ],
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        taskVm.tasksList[index].duration ?? "",
+                        style: TextStyle(fontSize: 12, color: Color(0xff3A3A3A)),
+                      ),
+                    ],
+                  ),
                 ),
                 Icon(
                   Icons.more_vert,
